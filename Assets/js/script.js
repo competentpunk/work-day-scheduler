@@ -2,16 +2,17 @@
 
 // Current Day
 var today = dayjs();
-$('.currentDay').text(today.format('MMM D, YYYY'));
+$('currentDay').text(today.format('MMM D, YYYY'));
 // How do I get this to display???
-function display(){
-document.textContent = ".currentDay";
+function display() {
+  document.textContent = "currentDay";
 }
+
 
 
 $(function () {
 
-});
+
   // TODO: Add a listener for click events on the save button. This code should use the id in the containing time-block as a key to save the user input in local storage. 
 
   // HINT: What does `this` reference in the click listener function? 
@@ -19,6 +20,22 @@ $(function () {
   // How can DOM traversal be used to get the "hour-x" id of the time-block containing the button that was clicked? 
 
   // How might the id be useful when saving the description in local storage?
+
+
+//get all save buttons
+var saveBtnEl=$(".saveBtn")
+
+//when we click any save button...
+saveBtnEl.on("click",
+  function () {
+    //get the text typed in this block
+    //which button got clicked? (event.target???)
+    //find the input next to this button (it's a ~sibling~, another child of its parent...)
+    //store that input's value in local storage
+
+    localStorage.setItem("userInput");
+  }
+);
 
   var button = document.querySelector(".userInput");
 
@@ -29,8 +46,8 @@ $(function () {
   }
 
   function handleFormSubmit(event) {
-event.preventDefault();
-console.log()
+    event.preventDefault();
+    console.log()
   }
 
 
@@ -40,11 +57,12 @@ console.log()
 
   // How can Day.js be used to get the current hour in 24-hour time?
 
+// var past = 
+// var present = 
+// var future = 
 
 
-
-
-  // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. 
+  // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding text area elements. 
 
   // HINT: How can the id attribute of each time-block be used to do this?
 
@@ -53,7 +71,7 @@ console.log()
 
 
   // TODO: Add code to display the current date in the header of the page.
-
+});
 
 
 
