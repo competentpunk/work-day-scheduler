@@ -2,9 +2,16 @@
 
 // Current Day
 var today = dayjs();
-$('currentDay').text(today.format('MMM D, YYYY'));
+$('.currentDay').text(today.format('MMM D, YYYY'));
+// How do I get this to display???
+function display(){
+document.textContent = ".currentDay";
+}
 
-$(function () {});
+
+$(function () {
+
+});
   // TODO: Add a listener for click events on the save button. This code should use the id in the containing time-block as a key to save the user input in local storage. 
 
   // HINT: What does `this` reference in the click listener function? 
@@ -13,7 +20,7 @@ $(function () {});
 
   // How might the id be useful when saving the description in local storage?
 
-  var button = ("userInput");
+  var button = document.querySelector(".userInput");
 
   function userInput(event) {
     console.log("save");
@@ -21,10 +28,10 @@ $(function () {});
     buttonClicked.parent().remove();
   }
 
-//   function handleFormSubmit(event) {
-// event.preventDefault();
-// console.log()
-//   }
+  function handleFormSubmit(event) {
+event.preventDefault();
+console.log()
+  }
 
 
   // TODO: Add code to apply the past, present, or future class to each time block by comparing the id to the current hour. 
