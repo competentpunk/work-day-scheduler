@@ -36,17 +36,17 @@ textarea {
 }
 
 .past {
-  background-color: #c3dadd;
+  background-color: #7ea3ac;
   color: white;
 }
 
 .present {
-  background-color: #99f7fc;
+  background-color: #61c8d8;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #c3dadd;
   color: white;
 }
 
