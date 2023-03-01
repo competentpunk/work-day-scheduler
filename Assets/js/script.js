@@ -24,7 +24,7 @@ function display() {
       // create an object that has two properties, userInput and hour ID
       //
     
-console.log(userInput);
+      console.log(userInput);
       // alert($(this).val());
       // $( "html" ).parent()
       // localStorage.setItem("userInput");
