@@ -2,10 +2,10 @@
 
 // Current Day
 var today = dayjs();
-$('currentDay').text(today.format('MMM D, YYYY'));
+$('#currentDay').text(today.format('MMM D, YYYY'));
 // How do I get this to display???
 function display() {
-  document.textContent = "currentDay";
+  document.textContent = "#currentDay";
 }
 
 
@@ -22,20 +22,38 @@ $(function () {
   // How might the id be useful when saving the description in local storage?
 
 
-//get all save buttons
-var saveBtnEl=$(".saveBtn")
+  //get all save buttons
+  var saveBtnEl = $(".saveBtn")
 
-//when we click any save button...
-saveBtnEl.on("click",
-  function () {
-    //get the text typed in this block
-    //which button got clicked? (event.target???)
-    //find the input next to this button (it's a ~sibling~, another child of its parent...)
-    //store that input's value in local storage
+  //when we click any save button...
+  saveBtnEl.on("click",
+    function () {
+      //get the text typed in this block
+      //which button got clicked? (event.target???)
+      //find the input next to this button (it's a ~sibling~, another child of its parent...)
+      //store that input's value in local storage
 
-    localStorage.setItem("userInput");
-  }
-);
+      localStorage.setItem("userInput");
+    }
+  );
+
+  // function saveToDo(form) {
+  //   if (localStorage.getitem(form) != pull) {
+  //     console.log(form);
+  //     var text = $('#text' + form).val();
+  //     console.log(text);
+  //     window.localStorage.setItem(form, text);
+  //     console.log(localStorage.getItem(form));
+  //     $('#button' + form).removeClass("fas fa-save");
+  //     $('#button' + form).addClass("fas fa-save");
+  //   }
+  //   else{
+  //     $("#button" + form).removeClass("fas fa-save");
+  //     $("#button" + form).addClass("fas fa-save");
+  //     $("#text" + form).val("")
+  //     localStorage.removeItem
+  //   }
+  // }
 
   var button = document.querySelector(".userInput");
 
@@ -57,9 +75,9 @@ saveBtnEl.on("click",
 
   // How can Day.js be used to get the current hour in 24-hour time?
 
-// var past = 
-// var present = 
-// var future = 
+  // var past = 
+  // var present = 
+  // var future = 
 
 
   // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding text area elements. 
